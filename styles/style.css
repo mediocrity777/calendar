@@ -24,6 +24,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+	flex-direction: column;
 }
 
 .calendar {
@@ -120,4 +121,37 @@ button {
 }
 .teal::before {
 	background-color: teal;
+}
+
+.description {
+	padding-top: 20px;
+	margin-left: -200px;
+	font-weight: bold;
+}
+
+.color-teal {
+	position: relative;
+	margin-bottom: 10px;
+}
+.color-teal::before,
+.color-orange::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: -15px;
+}
+
+.color-teal::before {
+	background-color: teal;
+}
+
+.color-orange {
+	position: relative;
+}
+
+.color-orange::before {
+	background-color: orange;
 }

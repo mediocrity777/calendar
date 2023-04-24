@@ -40,17 +40,15 @@ prev.addEventListener('click', () => {
 		}
 	}
 
-	initCalendar(now);
-
 	for (let i = 0; i < dateCells.length; i++) {
-		if (dateCells[i].classList.contains('inactive')) {
-			if (dateCells[i].classList.contains('orange')) {
-				dateCells[i].classList.remove('orange');
-			} else if (dateCells[i].classList.contains('teal')) {
-				dateCells[i].classList.remove('teal');
-			}
+		if (dateCells[i].classList.contains('orange')) {
+			dateCells[i].classList.remove('orange');
+		} else if (dateCells[i].classList.contains('teal')) {
+			dateCells[i].classList.remove('teal');
 		}
 	}
+
+	initCalendar(now);
 });
 
 next.addEventListener('click', () => {
@@ -61,17 +59,15 @@ next.addEventListener('click', () => {
 		}
 	}
 
-	initCalendar(now);
-
 	for (let i = 0; i < dateCells.length; i++) {
-		if (dateCells[i].classList.contains('inactive')) {
-			if (dateCells[i].classList.contains('orange')) {
-				dateCells[i].classList.remove('orange');
-			} else if (dateCells[i].classList.contains('teal')) {
-				dateCells[i].classList.remove('teal');
-			}
+		if (dateCells[i].classList.contains('orange')) {
+			dateCells[i].classList.remove('orange');
+		} else if (dateCells[i].classList.contains('teal')) {
+			dateCells[i].classList.remove('teal');
 		}
 	}
+
+	initCalendar(now);
 });
 
 function initCalendar(currentDate) {
@@ -154,6 +150,7 @@ function calcCleaningDay(year, month, date, index) {
 	let currentDayTime = currentDay.getTime();
 
 	let numOfDays = (currentDayTime - firstMarch.getTime()) / dayInMilisec * 10;
+
 	let color = 'orange';
 	let flag = 'orange';
 	let num = 0;
